@@ -1,16 +1,39 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { SearchBarComponent } from './components/header/search-bar/search-bar.component';
+import { LogoComponent } from './components/header/logo/logo.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
+import { NavPanelComponent } from './components/header/nav-panel/nav-panel.component';
+import { OpacityDDirective } from './directives/opacity-d.directive';
+import { UnderlineDDirective } from './directives/underline-d.directive';
+import { ZoomDDirective } from './directives/zoom-d.directive';
+import { PointerDDirective } from './directives/pointer-d.directive';
+import { ButtonHoverDDirective } from './directives/button-hover-d.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    SearchBarComponent,
+    LogoComponent,
+    MainPageComponent,
+    NavPanelComponent,
+    OpacityDDirective,
+    UnderlineDDirective,
+    ZoomDDirective,
+    PointerDDirective,
+    ButtonHoverDDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
