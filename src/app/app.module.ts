@@ -14,6 +14,8 @@ import { UnderlineDDirective } from './directives/underline-d.directive';
 import { ZoomDDirective } from './directives/zoom-d.directive';
 import { PointerDDirective } from './directives/pointer-d.directive';
 import { ButtonHoverDDirective } from './directives/button-hover-d.directive';
+import { InstructionPageComponent } from './components/instruction-page/instruction-page.component';
+import { IntroductionPageComponent } from './components/introduction-page/introduction-page.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ButtonHoverDDirective } from './directives/button-hover-d.directive';
     UnderlineDDirective,
     ZoomDDirective,
     PointerDDirective,
-    ButtonHoverDDirective
+    ButtonHoverDDirective,
+    InstructionPageComponent,
+    IntroductionPageComponent
   ],
   imports: [
     BrowserModule,

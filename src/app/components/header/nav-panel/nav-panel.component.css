@@ -4,3 +4,9 @@
   gap: 20px;
   color: brown;
 }
+.item{
+  transition: 1s;
+}
+.item:hover{
+  text-decoration: underline;
+}

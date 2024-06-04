@@ -1,0 +1,13 @@
+.container{
+  background-color:blanchedalmond;
+  min-height:10vh;
+  width:100%;
+  padding:20px;
+  box-sizing: border-box;
+  line-height: normal;
+}
+p{
+  margin: 2px;
+  color:brown;
+  text-align:center;
+}
