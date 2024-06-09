@@ -1,0 +1,17 @@
+.container{
+  display:flex;
+  width: 550px;
+  flex-direction: row;
+  gap:20px;
+  color: brown;
+  flex-wrap: wrap;
+  padding:20px;
+  font-size: 1.2em;
+  margin:auto;
+  justify-content: center;
+  align-items: center;
+}
+.item:hover{
+  cursor:pointer;
+  text-decoration: underline;
+}

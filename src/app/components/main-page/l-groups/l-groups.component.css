@@ -1,0 +1,40 @@
+.container{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+.input-container{
+  margin-top: 20px;
+}
+.subgroup{
+  margin-left: 20px;
+}
+.chosen{
+  text-decoration: underline;
+  font-style: italic;
+  display: inline-block;
+}
+.chosen:hover{
+  color:brown;
+  cursor:pointer;
+  .triangle{
+    border-top:14px solid brown;
+  }
+
+}
+h3{
+  position:relative;
+  display: inline-block;
+  margin: auto auto;
+}
+.triangle {
+  position:absolute;
+  width: 0;
+  height: 0;
+  top:10px;
+  right: -20px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top:14px solid black;
+}

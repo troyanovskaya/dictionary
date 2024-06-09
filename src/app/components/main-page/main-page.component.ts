@@ -25,9 +25,8 @@ export class MainPageComponent {
           if(!index){
             this.labels = el;
           } else{
-            this.data.push({word: el[0], example:el[1], meaning: el[2], emotion: el[3], linl:el[4]})
+            this.data.push({word: el[0], g_m: el[1], example:el[2], meaning: el[3], emotion: el[4], linl:el[5]})
           }
-          console.log(el)
         })
       },
       (error) => {

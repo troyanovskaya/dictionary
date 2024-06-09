@@ -16,6 +16,9 @@ import { PointerDDirective } from './directives/pointer-d.directive';
 import { ButtonHoverDDirective } from './directives/button-hover-d.directive';
 import { InstructionPageComponent } from './components/instruction-page/instruction-page.component';
 import { IntroductionPageComponent } from './components/introduction-page/introduction-page.component';
+import { AlphabetComponent } from './components/main-page/alphabet/alphabet.component';
+import { LGroupsComponent } from './components/main-page/l-groups/l-groups.component';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { IntroductionPageComponent } from './components/introduction-page/introd
     PointerDDirective,
     ButtonHoverDDirective,
     InstructionPageComponent,
-    IntroductionPageComponent
+    IntroductionPageComponent,
+    AlphabetComponent,
+    LGroupsComponent,
+
   ],
   imports: [
     BrowserModule,

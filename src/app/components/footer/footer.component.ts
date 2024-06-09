@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
-footerText = ["Кваліфікаційна робота", "студентки групи 4521", "Бринзи Даріни", "«Онлайн-словник»",];
+footerText = ["Кваліфікаційна робота", "студентки групи 4521", "Бринзи Даріни"];
 }
