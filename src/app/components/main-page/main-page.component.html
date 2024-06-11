@@ -1,7 +1,11 @@
 <app-alphabet></app-alphabet>
 <app-l-groups></app-l-groups>
-<table *ngIf="data.length > 0">
-  <tr *ngFor="let obj of data">
-    <td >{{ obj.word }}</td>
-  </tr>
-</table>
+<div  class="container">
+
+    <ng-container *ngFor="let obj of filterService.data; let i = index">
+      <div routerLink="/word/{{i}}"> <span class="word">{{ obj.word }}</span>: {{obj.meaning}}
+      </div>
+    </ng-container>
+
+</div>
+

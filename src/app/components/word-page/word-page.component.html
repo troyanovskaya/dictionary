@@ -1,0 +1,16 @@
+<div *ngIf="word" class="container">
+  <div class="word">| {{word.word}} |</div>
+  <div class="g_m">{{word.g_m}}</div>
+  <div class="group">
+    {{word.group}}
+    <span *ngIf="word.subgroup"> ({{word.subgroup}}) </span>
+  </div>
+  <div *ngFor="let m of word.meaning">{{m}}</div>
+  <a [href]="word.link">{{word.example}}</a>
+  <!-- <span> </span>
+  <span>{{word.example}} </span>
+  <span>{{word.emotion}} </span>
+  <span>{{word.link}} </span>
+  <span> </span>
+  <span>{{word.subgroup}} </span> -->
+</div>

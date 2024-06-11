@@ -18,6 +18,7 @@ import { InstructionPageComponent } from './components/instruction-page/instruct
 import { IntroductionPageComponent } from './components/introduction-page/introduction-page.component';
 import { AlphabetComponent } from './components/main-page/alphabet/alphabet.component';
 import { LGroupsComponent } from './components/main-page/l-groups/l-groups.component';
+import { WordPageComponent } from './components/word-page/word-page.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { LGroupsComponent } from './components/main-page/l-groups/l-groups.compo
     IntroductionPageComponent,
     AlphabetComponent,
     LGroupsComponent,
+    WordPageComponent,
 
   ],
   imports: [
