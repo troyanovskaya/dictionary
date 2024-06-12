@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
+import { FilterService } from 'src/app/services/filter.service';
 
 @Component({
   selector: 'app-l-groups',
   templateUrl: './l-groups.component.html',
   styleUrls: ['./l-groups.component.css']
 })
-export class LGroupsComponent {
+export class LGroupsComponent{
+constructor( private filterService: FilterService, private router: Router){}
 chosen = 'всі';
 visible = false;
 groups = [{group: 'назви реалій життя під час війни', subgroups: ['дії /події, спрямовані на громадян України', 'дії /події спрямовані на ворогів']},
@@ -20,8 +23,14 @@ groups = [{group: 'назви реалій життя під час війни',
           {group: 'назви громадян України', subgroups: ['назви українських воїнів', 'загальні назви українців, українських цивільних']},
           {group: 'назви поведінки політичних діячів, що пов’язана з війною в Україні', subgroups: []}
 ]
-changeValue(el: string){
-  console.log(el);
+changeValue(el: string, group:boolean, subgroup:boolean){
+  if(group){
+    this.filterService.newSearch.emit({word: '', group: el.toLocaleLowerCase().trim(), subgroup: ''});
+  } else if(subgroup){
+    this.filterService.newSearch.emit({word: '', group: '', subgroup: el.toLocaleLowerCase().trim()});
+  } else{
+    this.filterService.newSearch.emit({word: '', group: '', subgroup: ''});
+  }
   this.chosen = el;
   this.visible = !this.visible;
 

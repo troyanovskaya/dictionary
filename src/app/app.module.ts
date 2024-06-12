@@ -19,6 +19,7 @@ import { IntroductionPageComponent } from './components/introduction-page/introd
 import { AlphabetComponent } from './components/main-page/alphabet/alphabet.component';
 import { LGroupsComponent } from './components/main-page/l-groups/l-groups.component';
 import { WordPageComponent } from './components/word-page/word-page.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { WordPageComponent } from './components/word-page/word-page.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

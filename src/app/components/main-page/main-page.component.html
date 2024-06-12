@@ -2,10 +2,11 @@
 <app-l-groups></app-l-groups>
 <div  class="container">
 
-    <ng-container *ngFor="let obj of filterService.data; let i = index">
-      <div routerLink="/word/{{i}}"> <span class="word">{{ obj.word }}</span>: {{obj.meaning}}
+    <ng-container *ngFor="let obj of filterService.currentData; let i = index">
+      <div class="word" routerLink="/word/{{obj.id}}"> <span >{{ obj.word }}</span>: {{obj.meaning}}
       </div>
     </ng-container>
+    <div class="no-results" *ngIf="filterService.currentData.length == 0"> На жаль, цей пошук не дав результатів</div>
 
 </div>
 

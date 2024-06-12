@@ -6,10 +6,16 @@
   margin: auto auto;
   padding:20px;
 }
-.word{
-  font-style: italic;
+
+span{
+  font-style:italic;
 }
 .word:hover{
   cursor: pointer;
   text-decoration: underline;
+}
+.no-results{
+  font-style: italic;
+  color: grey;
+  text-align: center;
 }

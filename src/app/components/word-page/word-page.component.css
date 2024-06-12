@@ -6,10 +6,17 @@
   font-size: 1.3em;
 }
 .g_m{
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 a{
   color: black;
   text-decoration: none;
   font-style: italic;
+}
+.group{
+  display: inline-block;
+  font-size: 0.8em;
+}
+.connotation{
+  font-size: 0.8em;
 }

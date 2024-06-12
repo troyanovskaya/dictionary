@@ -6,14 +6,14 @@
   </h3>
   <div class="input-container" *ngIf="visible">
     <div>
-       <input (change)="changeValue('всі')" type="radio" id = "всі" name="всі" value="всі">
-       <label for="всі">Всі</label><br>
+       <input (change)="changeValue('всі', false, false)" type="radio" id = "всі" name="всі" value="всі">
+       <label for="всі">всі</label><br>
     </div>
     <div *ngFor="let el of groups">
-       <input (change)="changeValue(el.group)" type="radio" [id] = "el.group" [name]="groups" [value]="el.group">
+       <input (change)="changeValue(el.group, true, false)" type="radio" [id] = "el.group" [name]="groups" [value]="el.group">
        <label [for]="el.group">{{el.group}}</label><br>
       <div *ngFor="let s of el.subgroups">
-         <input (change)="changeValue(s)" class="subgroup" type="radio" [id] = "s" [name]="groups" [value]="s">
+         <input (change)="changeValue(s, false, true)" class="subgroup" type="radio" [id] = "s" [name]="groups" [value]="s">
          <label [for]="s">{{s}}</label><br>
       </div>
     </div>

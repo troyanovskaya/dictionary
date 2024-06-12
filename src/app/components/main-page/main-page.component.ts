@@ -12,7 +12,10 @@ export class MainPageComponent {
   constructor(public filterService: FilterService) { }
 
   ngOnInit() {
+
+    this.filterService.newSearch.subscribe(data => console.log(data));
     this.filterService.loadData();
+    this.filterService.clearSearch();
   }
 
 
