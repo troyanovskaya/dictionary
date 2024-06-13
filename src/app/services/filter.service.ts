@@ -37,6 +37,7 @@ export class FilterService {
     });
   }
   loadData() {
+    this.data = [];
     this.subscribeForSearch();
     this.dataService.loadExcel().subscribe(
       (data) => {
