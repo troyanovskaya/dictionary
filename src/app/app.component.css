@@ -3,4 +3,9 @@
 }
 .footer{
   min-height: 20vh;
+  background-color: blanchedalmond;
+}
+.header{
+  min-height: 15vh;
+  background-color: blanchedalmond
 }
