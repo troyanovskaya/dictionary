@@ -1,4 +1,8 @@
 <div class="container">
   <h2>{{label}}</h2>
-  <p *ngFor="let t of text">&nbsp;&nbsp;{{t}}</p>
+  <div class="item" *ngFor="let t of text">
+    <p >&nbsp;&nbsp;{{t.item}}</p>
+    <img *ngFor="let img of t.img" [src]="img" [alt]="img">
+  </div>
+
 </div>
