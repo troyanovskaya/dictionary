@@ -8,6 +8,7 @@ export class FilterService {
   word = '';
   group = '';
   subgroup = '';
+  letter = '';
   data: any[] = [];
   error: string | null = null;
   labels: string[] = [];
@@ -25,7 +26,10 @@ export class FilterService {
       if(searchObj.subgroup){
         this.subgroup = searchObj.subgroup;
       }
-      if(!searchObj.subgroup && !searchObj.group && !searchObj.word){
+      if(searchObj.letter){
+        this.letter = searchObj.letter;
+      }
+      if(!searchObj.subgroup && !searchObj.group && !searchObj.word && !searchObj.letter){
         this.subgroup = searchObj.subgroup;
         this.group = searchObj.group;
       }
@@ -55,7 +59,7 @@ export class FilterService {
   }
   searchFor(){
     this.currentData = this.data.filter(el =>{
-      return el.word.includes(this.word) && el.group.includes(this.group) && el.subgroup.includes(this.subgroup);
+      return el.word.includes(this.word) && el.group.includes(this.group) && el.subgroup.includes(this.subgroup) && (this.letter ? el.word[0] == this.letter : true);
     })
   }
   getWord(id:number){

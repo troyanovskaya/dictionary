@@ -25,11 +25,11 @@ groups = [{group: 'назви реалій життя під час війни',
 ]
 changeValue(el: string, group:boolean, subgroup:boolean){
   if(group){
-    this.filterService.newSearch.emit({word: '', group: el.toLocaleLowerCase().trim(), subgroup: ''});
+    this.filterService.newSearch.emit({word: '', group: el.toLocaleLowerCase().trim(), subgroup: '', letter: ''});
   } else if(subgroup){
-    this.filterService.newSearch.emit({word: '', group: '', subgroup: el.toLocaleLowerCase().trim()});
+    this.filterService.newSearch.emit({word: '', group: '', subgroup: el.toLocaleLowerCase().trim(), letter: ''});
   } else{
-    this.filterService.newSearch.emit({word: '', group: '', subgroup: ''});
+    this.filterService.newSearch.emit({word: '', group: '', subgroup: '', letter: ''});
   }
   this.chosen = el;
   this.visible = !this.visible;

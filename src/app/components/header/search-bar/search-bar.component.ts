@@ -10,7 +10,7 @@ import { FilterService } from 'src/app/services/filter.service';
 export class SearchBarComponent implements OnInit{
   input:string = '';
   search(){
-    this.filterService.newSearch.emit({word: this.input.toLocaleLowerCase().trim(), group: '', subgroup: ''});
+    this.filterService.newSearch.emit({word: this.input.toLocaleLowerCase().trim(), group: '', subgroup: '', letter: ''});
   }
   constructor( private filterService: FilterService, private router: Router){}
   ngOnInit(): void {
